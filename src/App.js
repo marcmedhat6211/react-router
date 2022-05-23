@@ -2,10 +2,12 @@ import { Route } from "react-router-dom"; // this is a component that allows us 
 
 import Welcome from "./pages/Welcome";
 import Products from "./pages/Products";
+import MainHeader from "./components/MainHeader";
 
 function App() {
   return (
     <div>
+      <MainHeader />
       <Route path={"/welcome"}>
         <Welcome />
       </Route>
