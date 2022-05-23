@@ -1,4 +1,4 @@
-import { Route, Switch } from "react-router-dom"; // this is a component that allows us to define a certain path and the react component that should be rendered when this path is active in the url
+import { Route, Switch, Redirect } from "react-router-dom"; // this is a component that allows us to define a certain path and the react component that should be rendered when this path is active in the url
 
 import Welcome from "./pages/Welcome";
 import Products from "./pages/Products";
@@ -21,6 +21,9 @@ function App() {
       <MainHeader />
       <main>
         <Switch>
+          <Route path="/" exact>
+            <Redirect to="/welcome" />
+          </Route>
           <Route path="/welcome">
             <Welcome />
           </Route>
